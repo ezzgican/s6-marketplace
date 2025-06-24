@@ -1,4 +1,7 @@
 import Product from "./../components/Product";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+
 
 /*
   Bu component;
@@ -11,10 +14,20 @@ import Product from "./../components/Product";
 */
 
 export default function ProductList(props) {
+const { activeCategory } = props;
+  const [products, setProducts] = useState([]);
+
+  // Kategori değiştikçe ürünleri çek
+  useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products/category/${activeCategory}`)
+      .then((res) => setProducts(res.data))
+      .catch((err) => setProducts([]));
+  }, [activeCategory]);
+
   return (
     <main className="productList">
-      <h2 data-testid="productList-title">{/* active category */} ürünleri</h2>
-      {[].map((item) => (
+      <h2 data-testid="productList-title">{activeCategory} ürünleri</h2>
+      {products.map((item) => (
         <Product key={item.id} product={item} />
       ))}
     </main>

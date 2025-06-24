@@ -1,0 +1,53 @@
+{
+  "stats": "12 passed, 0 failed out of 12",
+  "tests": [
+    {
+      "name": "App içinde activeCategory adında bir state tanımlanmış mı?",
+      "state": "pass"
+    },
+    {
+      "name": "App içindeki activeCategory state'inin başlangıç değeri 'electronics' mi?",
+      "state": "pass"
+    },
+    {
+      "name": "App içinde handleCatChange adında bir fonksiyon tanımlanmış mı?",
+      "state": "pass"
+    },
+    {
+      "name": "ProductList componentına activeCategory props'u gönderilmiş mi?",
+      "state": "pass"
+    },
+    {
+      "name": "ProductList activeCategory'yi props olarak alıyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "ProductList başlangıç kategorisinde doğru sayıda elemanı gösteriyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "activeCategory her değiştiğinde ürünler değişiyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "ProductList içinde bir state tanımlanmış mı?",
+      "state": "pass"
+    },
+    {
+      "name": "Sidebar componentına hem handleCatChange hem activeCategory props'ları iletilmiş mi?",
+      "state": "pass"
+    },
+    {
+      "name": "Sidebar içinde bir state tanımlanmış mı?",
+      "state": "pass"
+    },
+    {
+      "name": "Sidebar componenti kategorileri listeliyor mı?",
+      "state": "pass"
+    },
+    {
+      "name": "Sidebar Category componentına gerekli propsları doğru isimlerle iletiyor mu?",
+      "state": "pass"
+    }
+  ]
+}

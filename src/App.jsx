@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import ProductList from "./components/ProductList";
 
 import "./App.css";
+import { useState } from "react";
 
 /*
   Bu componentın,
@@ -13,13 +14,21 @@ import "./App.css";
 */
 
 function App() {
+
+
+const [activeCategory, setActiveCategory] = useState("electronics");
+
+  function handleCatChange(cat) {
+    setActiveCategory(cat);
+  }
+
   return (
     <div className="container">
       <Header />
       <div className="content-wrapper">
         <div className="content">
-          <Sidebar />
-          <ProductList />
+          <Sidebar activeCategory={activeCategory} handleCatChange={handleCatChange}/>
+          <ProductList activeCategory={activeCategory}/>
         </div>
       </div>
       <Footer />
@@ -28,3 +37,5 @@ function App() {
 }
 
 export default App;
+
+
